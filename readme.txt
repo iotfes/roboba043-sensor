@@ -12,6 +12,9 @@ Author: Sho KANEMARU
 ○セットアップ方法
 (記入中。。)
 
+○実行例
+(記入中。。)
+
 ○赤外線アレイセンサについて
 - 一度の測定情報で64個(8x8)の温度データを取得できるセンサ。領域の温度を測定することが可能です。
 http://moosoft.jp/index.php?option=com_content&view=article&id=105&Itemid=140
