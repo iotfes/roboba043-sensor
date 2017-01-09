@@ -1,0 +1,10 @@
+# デバイスID (Cumulocityが払い出したID)
+deviceId: "******"
+# CumulocityへのログインID
+userId: "******"
+# Cumulocityへのログインパスワード
+password:  "******"
+# TTYへのファイルパス (赤外線アレイセンサをUSB接続した際にRaspberry piの/dev 配下に出現するディレクトリ名を記入。例： "/dev/ttyUSB0")
+ttypath: "******"
+# CumulocityのURL
+url: "******"
