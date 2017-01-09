@@ -74,12 +74,12 @@ for i in 0..63 do
 end
 p calc_array
 
-#-------------------- API実行時のペイロード(JSON)を作成 ----------------------
+#--------------- Cumulocity API実行用のペイロード(JSON)を作成 ------------
 # 現在時刻を取得
 day = Time.now
 currentTime = day.strftime("%Y-%m-%dT%H:%M:%S.000+09:00")
 
-# JSON
+# 温度データ64個分のJSONを作成
 hash_array = []
 for i in 0..63 do
   hash_array[i] = {
@@ -95,13 +95,12 @@ for i in 0..63 do
   }
 end
 
-p hash_array
-
+# 温度データ64個分のJSONを配列としてセット(Cumulocityが受信できるJSONに変換)
 data = {
   :measurements => hash_array
 }
 
-#------------ POST /measurement/measurementsを実行しデータをupload ------------
+#----------- Cumulociy API (POST /measurement/measurements)を実行 ----------
 # URLからURIをパース
 uri = URI.parse(URL)
 
@@ -117,14 +116,14 @@ initheader = {
   'Authorization'=>'Basic ' + Base64.encode64("#{USERID}:#{PASSWD}")
 }
 
-# httpリクエストの生成、送信(温度)
+# httpリクエストを送信
 request = Net::HTTP::Post.new(uri.request_uri, initheader)
 payload = JSON.pretty_generate(data)
 request.body = payload
 #p request
 response = https.request(request)
 
-# 返却の中身を見てみる
+# httpレスポンスの中身を確認
 puts "------------------------"
 puts "code -> #{response.code}"
 puts "msg -> #{response.message}"
