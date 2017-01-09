@@ -42,7 +42,7 @@ sp.read_timeout = 5000
 delimiterCRLF = "\r\n"
 delimiterCR = "\r"
 
-# set slave register address to 0x80
+# "w80"コマンドを実行(読み込むregisterのアドレスを0x80にセット)
 begin
   sp.write("w80#{delimiterCRLF}")
   line = sp.gets(delimiterCRLF)
@@ -50,7 +50,7 @@ begin
   sleep(3)
 end while line != "ok#{delimiterCRLF}"
 
-# read 0x80 bytes from 0x80 address
+# "r80"コマンドを実行(0x80番地から0x80バイト分のデータを取得)
 begin
   sp.write("r80#{delimiterCR}")
   line = sp.gets(delimiterCRLF)
@@ -64,7 +64,7 @@ sp.close
 data_array = line.split(",")
 p data_array
 
-# set calc_array[
+# センサから取得した64個の温度情報をset calc_array[0]-[63]に格納
 calc_array = []
 num = 0
 for i in 0..63 do
