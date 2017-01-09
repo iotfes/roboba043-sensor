@@ -12,6 +12,7 @@ Author: Sho KANEMARU
 http://moosoft.jp/images/moosoft/grideye/grideye_manual.pdf
 
 ○セットアップ方法
+(記入中。。)
 
 ○赤外線アレイセンサについて
 - 一度の測定情報で64個(8x8)の温度データを取得できるセンサ。領域の温度を測定することが可能です。
