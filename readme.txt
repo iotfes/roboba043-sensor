@@ -8,8 +8,6 @@ Author: Sho KANEMARU
 
 ○ calc_temperature.rb
 - Roboba043赤外線アレイセンサから取得した温度情報(バイナリ)を8x8二次元配列に変換するためのライブラリ
-- 下記ドキュメントのP9を実装しています。
-http://moosoft.jp/images/moosoft/grideye/grideye_manual.pdf
 
 ○セットアップ方法
 (記入中。。)
@@ -19,7 +17,7 @@ http://moosoft.jp/images/moosoft/grideye/grideye_manual.pdf
 http://moosoft.jp/index.php?option=com_content&view=article&id=105&Itemid=140
 https://industrial.panasonic.com/jp/products/sensors/built-in-sensors/grid-eye
 
-- シリアル通信により温度情報を取得する。
+- Raspberry piと赤外線アレイセンサ間はシリアル通信を用いている。
 - シリアル通信用コマンドの詳細は下記を参照。(calc_temperature.rbは下記ドキュメントのP9を実装しています。)
 http://moosoft.jp/images/moosoft/grideye/grideye_manual.pdf
 
