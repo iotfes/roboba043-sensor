@@ -9,10 +9,6 @@ Author: Sho KANEMARU
 ○ calc_temperature.rb
 - Roboba043赤外線アレイセンサから取得した温度情報(バイナリ)を8x8二次元配列に変換するためのライブラリ
 
-○roboba043client.rb
-- Roboba043赤外線アレイセンサから8x8温度情報を取得し、Cumulocityへアップするスクリプト
-- usage: 同じディレクトリにcalc_temperature.rb を配置した上で、下記コマンドを実行
-
 ○セットアップ方法
 - シリアル通信用のrubyライブラリをインストールする。
 $ sudo gem install serialport
