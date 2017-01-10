@@ -105,7 +105,7 @@ data = {
 uri = URI.parse(URL)
 
 https = Net::HTTP.new(uri.host, uri.port)
-https.set_debug_output $stderr
+#https.set_debug_output $stderr
 #https.use_ssl = false # HTTPSは使用しない
 https.use_ssl = true # HTTPSを使用する
 
